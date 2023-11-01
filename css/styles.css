@@ -123,6 +123,7 @@ ul {
     display: none;
   }
   .contact-link {
+    font-size: 12px;
     font-style: normal;
     color: var(--Text);
     letter-spacing: 0.32px;
@@ -501,7 +502,8 @@ ul {
   .our-customers-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 16px;
+    column-gap: 16px;
+    row-gap: 72px;
   }
   .our-customers-box {
     width: calc((100% - 16px) / 2);
@@ -853,7 +855,7 @@ ul {
     list-style: none;
     display: flex;
     gap: 40px;
-    margin-right: 40px;
+    margin-left: 120px;
   }
   .main-menu:first-child {
     margin-left: 0px;
@@ -980,8 +982,8 @@ ul {
   }
   .footer {
     background-color: var(--Dark);
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-top: 96px;
+    padding-bottom: 96px;
   }
   .footer-text {
     color: var(--Light);
@@ -1031,10 +1033,10 @@ ul {
   }
   .our-approach-text-head {
     color: var(--Dark);
-    font-size: 20px;
-    font-weight: 500;
+    font-size: 36px;
+    font-weight: 700;
     line-height: 1.2;
-    letter-spacing: 0.4px;
+    letter-spacing: 0.472px;
     margin-bottom: 8px;
   }
   .text {
@@ -1055,17 +1057,19 @@ ul {
   }
   .our-approach-text {
     font-size: 16px;
+    font-weight: 500;
   }
   .our-approach {
-    padding-top: 120px;
-    padding-bottom: 120px;
+    padding: 96px 16px;
   }
   .our-approach-list {
     display: flex;
-    gap: 24px;
+    flex-wrap: wrap;
+    column-gap: 24px;
+    row-gap: 72px;
   }
   .our-approach-content {
-    flex-basis: calc((100% - 72px) / 4);
+    flex-basis: calc((100% - 24px) / 2);
   }
   .our-approach-icons {
     display: flex;
@@ -1099,8 +1103,8 @@ ul {
   }
   .our-team {
     background-color: var(--Light);
-    padding-top: 120px;
-    padding-bottom: 120px;
+    padding-top: 96px;
+    padding-bottom: 96px;
   }
   .our-team-title {
     color: var(--Dark);
@@ -1114,7 +1118,12 @@ ul {
   }
   .our-team-list {
     display: flex;
-    gap: 24px;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 24px;
+    row-gap: 64px;
+    padding-left: 72px;
+    padding-right: 72px;
   }
   .teammate {
     background-color: var(--White-background);
@@ -1175,8 +1184,6 @@ ul {
   }
   .container {
     max-width: 1158px;
-    padding-left: 15px;
-    padding-right: 15px;
     margin: 0 auto;
   }
   .header-menu {
@@ -1186,6 +1193,9 @@ ul {
   .header-menu-contact-box {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    height: 72px;
+    padding: 16px;
   }
   .header {
     border-bottom: 1px solid var(--CORNFLOWER, #e7e9fc);
@@ -1195,8 +1205,8 @@ ul {
   }
   .contact-box {
     display: flex;
-    gap: 40px;
-    margin-left: 292px;
+    flex-direction: column;
+    gap: 12px;
   }
   .projects {
     padding-bottom: 120px;
@@ -1264,8 +1274,8 @@ ul {
     height: auto;
   }
   .our-customers {
-    padding-top: 120px;
-    padding-bottom: 120px;
+    padding-top: 96px;
+    padding-bottom: 96px;
   }
   .our-customers-logo {
     fill: currentColor;
@@ -1274,10 +1284,14 @@ ul {
   }
   .our-customers-list {
     display: flex;
-    gap: 24px;
+    flex-wrap: wrap;
+    column-gap: 24px;
+    row-gap: 72px;
+    margin-left: 108px;
+    margin-right: 108px;
   }
   .our-customers-box {
-    width: calc((100% - 120px) / 6);
+    width: calc((100% - 48px) / 3);
     height: 88px;
   }
   .our-customers-logo:hover {
@@ -1312,6 +1326,10 @@ ul {
   }
   .footer-content {
     display: flex;
+    flex-wrap: wrap;
+    column-gap: 24px;
+    row-gap: 72px;
+    padding-left: 108px;
   }
   .social-text {
     font-weight: 500;
@@ -1323,7 +1341,6 @@ ul {
   }
   .footer-content-logo {
     display: inline-block;
-    justify-content: center;
     margin-bottom: 17.5px;
   }
   .footer-content-social-list {
@@ -1513,7 +1530,6 @@ ul {
     appearance: none;
   }
   .subscribe {
-    margin-left: 80px;
     display: inline-block;
   }
   .checkbox-icon-span {
