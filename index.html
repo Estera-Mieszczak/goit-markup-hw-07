@@ -73,7 +73,7 @@
       </section>
       <section class="our-approach">
         <div class="container">
-          <h2 class="visually-hidden">Halo Halo</h2>
+          <h2 class="visually-hidden">Our Approach</h2>
           <ul class="list our-approach-list">
             <li class="our-approach-content">
               <div class="our-approach-icons">
@@ -568,6 +568,7 @@
                 type="text"
                 name="user-name"
                 id="user-name"
+                required
               />
               <svg
                 class="form-icon"
@@ -587,6 +588,8 @@
                 type="tel"
                 name="phone"
                 id="phone"
+                pattern="[0-9]{9}"
+                required
               />
               <svg
                 class="form-icon"
@@ -606,6 +609,7 @@
                 type="email"
                 name="email"
                 id="email"
+                required
               />
               <svg
                 class="form-icon"
@@ -635,6 +639,7 @@
               name="user-privacy"
               id="user-privacy"
               value="true"
+              required
             />
             <label class="privacypolicy-label" for="user-privacy">
               <span class="checkbox-icon-span">
