@@ -24,6 +24,7 @@ body {
 }
 img {
   display: block;
+  max-width: 100%;
 }
 h1,
 h2,
@@ -77,6 +78,8 @@ ul {
 .header-menu {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  width: 100%;
 }
 .header-menu-contact-box {
   display: flex;
@@ -92,6 +95,153 @@ ul {
   box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08),
     0px 1px 1px 0px rgba(46, 47, 66, 0.16),
     0px 2px 1px 0px rgba(46, 47, 66, 0.08);
+}
+.menu-toggle {
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  outline: none;
+  fill: var(--Dark);
+  min-height: 40px;
+  min-width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.menu-toggle:hover,
+.menu-toggle:focus {
+  cursor: pointer;
+}
+.menu-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding: 40px;
+  background-color: var(--White-background);
+  z-index: 999;
+  opacity: 1;
+  transform: translateX(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.menu-container .is-hidden {
+  opacity: 0;
+}
+.menu-container.is-open {
+  transform: translateX(0);
+}
+.mobile-menu {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.mobile-menu .link {
+  display: block;
+  padding-top: 40px;
+  color: var(--Dark);
+  text-decoration: none;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.11;
+  letter-spacing: 0.72px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.mobile-menu .link:hover,
+.mobile-menu .link:focus {
+  color: var(--Pressed-state);
+}
+.menu-container .mobile-menu-close {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  background-color: transparent;
+  border-radius: 50%;
+  border: 1px solid var(--Accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0px;
+  color: var(--Dark);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.mobile-menu-close:hover {
+  background-color: var(--Pressed-state);
+  color: #ffffff;
+  border: none;
+}
+.mobile-menu-close:focus {
+  background-color: var(--Pressed-state);
+  color: #ffffff;
+  border: none;
+}
+.mobile-menu-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+.contact-mobile-menu-link {
+  margin-top: 40px;
+  margin-bottom: 0px;
+}
+.mobile-contact-phone-link {
+  font-size: 36px;
+  font-weight: 700;
+  font-style: normal;
+  color: var(--Text);
+  letter-spacing: 0.72px;
+  text-decoration: none;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.mobile-contact-phone-link:hover,
+.mobile-contact-phone-link:focus {
+  color: var(--Pressed-state);
+}
+.mobile-contact-email-link {
+  font-size: 20px;
+  font-weight: 500;
+  font-style: normal;
+  color: var(--Text);
+  letter-spacing: 0.4px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.mobile-contact-email-link:hover,
+.mobile-contact-email-link:focus {
+  color: var(--Pressed-state);
+}
+.mobile-social {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 48px;
+}
+.mobile-social-links {
+  width: 100%;
+  height: 100%;
+  background-color: var(--Primary-Brand);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.mobile-social-links:focus,
+.mobile-social-links:hover {
+  background-color: var(--Pressed-state);
+}
+.mobile-social-links > svg {
+  display: block;
+  width: 24px;
+  height: 24px;
 }
 .main-menu {
   display: none;
@@ -222,7 +372,6 @@ ul {
 }
 .footer {
   background-color: var(--Dark);
-  min-width: 320px;
   padding-top: 96px;
   padding-bottom: 96px;
 }
@@ -240,7 +389,7 @@ ul {
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(../images/main-banner.jpg);
+    url(../images/people-office-1.jpg);
   background-size: cover;
   min-width: 320px;
   height: 432px;
@@ -496,8 +645,8 @@ ul {
   height: auto;
 }
 .our-customers {
-  padding: 96px;
-  min-width: 320px;
+  padding-top: 96px;
+  padding-bottom: 96px;
 }
 .our-customers-logo {
   fill: currentColor;
@@ -507,13 +656,12 @@ ul {
 .our-customers-list {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   column-gap: 16px;
   row-gap: 72px;
-  margin-left: auto;
-  margin-right: auto;
 }
 .our-customers-box {
-  width: calc((100% - 16px) / 2);
+  width: 190px;
   height: 88px;
 }
 .our-customers-logo:hover {
@@ -562,6 +710,7 @@ ul {
 }
 .footer-content-logo {
   display: inline-block;
+  text-align: center;
   margin-bottom: 16px;
 }
 .footer-content-social {
@@ -576,6 +725,8 @@ ul {
   height: 40px;
 }
 .footer-content-box-logo {
+  display: flex;
+  flex-direction: column;
   margin-left: auto;
   margin-right: auto;
 }
@@ -843,12 +994,15 @@ ul {
 
 @media screen and (min-width: 768px) {
   .container {
-    width: 768px;
+    max-width: 768px;
   }
   .header-menu-contact-box {
     width: 768px;
     height: 72px;
     display: flex;
+  }
+  .menu-toggle {
+    display: none;
   }
   .main-menu {
     list-style: none;
@@ -951,8 +1105,6 @@ ul {
     flex-wrap: wrap;
     column-gap: 24px;
     row-gap: 72px;
-    margin-left: 108px;
-    margin-right: 108px;
   }
   .our-customers-box {
     width: calc((100% - 48px) / 3);
@@ -964,8 +1116,9 @@ ul {
     flex-direction: row;
     column-gap: 24px;
     row-gap: 72px;
-    margin-left: 108px;
-    margin-right: 108px;
+  }
+  .footer-content-logo {
+    text-align: left;
   }
   .social-text {
     text-align: left;
@@ -986,6 +1139,7 @@ ul {
     margin: 0;
   }
 }
+
 /* --------------------------------------------------------------------------- */
 
 @media screen and (max-width: 1199px) {
@@ -996,12 +1150,31 @@ ul {
     display: none;
   }
 }
+@media (min-device-pixel-ratio: 2),
+  (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .main-banner {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/people-office-1@2x.jpg);
+  }
+}
 
 /* ---------------------------------------Desktop--------------------------------- */
 
 @media screen and (min-width: 1200px) {
   .container {
-    width: 1200px;
+    max-width: 1128px;
+  }
+  .header-menu {
+    display: flex;
+    justify-content: flex-start;
+  }
+  .header-menu-contact-box {
+    width: 100%;
   }
   .main-banner {
     max-width: 1200px;
@@ -1016,7 +1189,6 @@ ul {
     display: flex;
     flex-direction: row;
     gap: 40px;
-    margin-left: 292px;
   }
   .contact-link {
     font-size: 16px;

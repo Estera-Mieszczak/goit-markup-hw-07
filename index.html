@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="WebStudio" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WebStudio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -26,6 +26,21 @@
           <a class="logo link" href="./index.html"
             >Web<span class="studio">Studio</span></a
           >
+          <button
+            class="menu-toggle js-open-menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+          >
+            <svg
+              width="32"
+              height="22"
+              fill="currentColor"
+              viewbox="0 0 32 22"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <use href="./images/icons.svg#icon-Mobile-menu-icon"></use>
+            </svg>
+          </button>
           <ul class="main-menu list">
             <li>
               <a
@@ -133,16 +148,23 @@
             <li class="our-projects-content">
               <img
                 src="./images/monitor.jpg"
+                srcset="./images/monitor@2x.jpg x2"
                 alt="single apple monitor with some charts on it"
                 width="360"
               />
             </li>
             <li class="our-projects-content">
-              <img src="./images/phone.jpg" alt="phone mock up" width="360" />
+              <img
+                src="./images/phone.jpg"
+                srcset="./images/phone@2x.jpg x2"
+                alt="phone mock up"
+                width="360"
+              />
             </li>
             <li class="our-projects-content">
               <img
                 src="./images/laptop.jpg"
+                srcset="./images/laptop@2x.jpg x2"
                 alt="hand keeping phone and laptop in background"
                 width="360"
               />
@@ -157,6 +179,7 @@
             <li class="teammate">
               <img
                 src="./images/teammate1.jpg"
+                srcset="./images/teammate1@2x.jpg x2"
                 alt="man with short, dark hair and beard"
                 width="264"
               />
@@ -218,6 +241,7 @@
             <li class="teammate">
               <img
                 src="./images/teammate2.jpg"
+                srcset="./images/teammate2@2x.jpg x2"
                 alt="young smiling man with blonde, short hair"
                 width="264"
               />
@@ -279,6 +303,7 @@
             <li class="teammate">
               <img
                 src="./images/teammate3.jpg"
+                srcset="./images/teammate3@2x.jpg x2"
                 alt="young woman with long straight dark hair"
                 width="264"
               />
@@ -340,6 +365,7 @@
             <li class="teammate">
               <img
                 src="./images/teammate4.jpg"
+                srcset="./images/teammate4@2x.jpg x2"
                 alt="Young smiling man with curly dark hair"
                 width="264"
               />
@@ -658,6 +684,102 @@
         </form>
       </div>
     </div>
+    <div class="menu-container is-hidden js-menu-container" id="mobile-menu">
+      <button class="mobile-menu-close js-close-menu" type="button">
+        <svg
+          class="close-icon"
+          width="8"
+          height="8"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <use href="./images/icons.svg#icon-close"></use>
+        </svg>
+      </button>
+      <div class="mobile-menu-container">
+        <ul class="mobile-menu">
+          <li><a href="./index.html" class="link">Studio</a></li>
+          <li><a href="./portfolio.html" class="link">Portfolio</a></li>
+          <li><a href="" class="link">Contacts</a></li>
+        </ul>
+        <div class="mobile-menu-contact-box">
+          <address class="contact-mobile-menu">
+            <ul class="list">
+              <li class="contact-mobile-menu-link">
+                <a
+                  class="mobile-contact-phone-link link"
+                  href="tel:+110001111111"
+                  >+11 (000) 111-11-11</a
+                >
+              </li>
+              <li class="contact-mobile-menu-link">
+                <a
+                  class="mobile-contact-email-link link"
+                  href="mailto:info@devstudio.com"
+                  >info@devstudio.com</a
+                >
+              </li>
+            </ul>
+          </address>
+          <ul class="mobile-social list">
+            <li class="teammate-social-icons">
+              <a href="" class="mobile-social-links">
+                <svg
+                  class="social-icons"
+                  width="24"
+                  height="24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <use href="./images/icons.svg#icon-instagram-2"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="teammate-social-icons">
+              <a href="" class="mobile-social-links">
+                <svg
+                  class="social-icons"
+                  width="24"
+                  height="24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <use href="./images/icons.svg#icon-twitter-1"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="teammate-social-icons">
+              <a href="" class="mobile-social-links">
+                <svg
+                  class="social-icons"
+                  width="24"
+                  height="24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <use href="./images/icons.svg#icon-facebook-1"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="teammate-social-icons">
+              <a href="" class="mobile-social-links">
+                <svg
+                  class="social-icons"
+                  width="24"
+                  height="24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <use href="./images/icons.svg#icon-linkedin-1"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
