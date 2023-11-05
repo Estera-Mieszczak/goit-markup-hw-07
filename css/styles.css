@@ -391,10 +391,10 @@ ul {
     ),
     url(../images/people-office-1.jpg);
   background-size: cover;
-  min-width: 320px;
   height: 432px;
   margin-left: auto;
   margin-right: auto;
+  max-width: 768px;
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -1065,7 +1065,7 @@ ul {
     margin-left: 121px;
   }
   .main-banner {
-    max-width: 768px;
+    max-width: 1199px;
   }
   .main-banner-title {
     margin-bottom: 36px;
@@ -1172,9 +1172,15 @@ ul {
   .header-menu {
     display: flex;
     justify-content: flex-start;
+    width: 452px;
+  }
+  .main-menu {
+    margin-left: 76px;
   }
   .header-menu-contact-box {
     width: 100%;
+    padding-left: 0px;
+    padding-right: 0px;
   }
   .main-banner {
     max-width: 1200px;
@@ -1187,8 +1193,10 @@ ul {
   }
   .contact-box {
     display: flex;
+    flex-wrap: nowrap;
     flex-direction: row;
     gap: 40px;
+    margin-left: 0px;
   }
   .contact-link {
     font-size: 16px;
