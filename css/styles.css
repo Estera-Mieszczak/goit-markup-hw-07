@@ -498,7 +498,6 @@ ul {
   background-color: var(--Light);
   padding-top: 96px;
   padding-bottom: 96px;
-  min-width: 320px;
 }
 .our-team-title {
   color: var(--Dark);
@@ -1173,17 +1172,20 @@ ul {
   .container {
     max-width: 428px;
   }
+  .main-banner {
+    max-width: 428px;
+  }
   .header-menu-contact-box {
     width: 100%; 
   }
   .our-customers > .container {
-    max-width: 428px;
+    width: 428px;
   }
   .our-customers-box {
     width: 136px;
   }
   .newsletter-subscribe-field {
-    width: 320px;
+    width: 280px;
   }
   .mobile-social {
     gap: 26px;
