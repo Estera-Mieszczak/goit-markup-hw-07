@@ -461,7 +461,7 @@ ul {
   gap: 72px;
 }
 .our-approach-content {
-  width: 396px;
+  width: 100%;
   margin: 0 auto;
 }
 .our-approach-icons {
@@ -992,6 +992,8 @@ ul {
   margin-left: 16px;
 }
 
+/* ---------------------------------------320-428px--------------------------------- */
+
 /* ---------------------------------------Tablet--------------------------------- */
 
 @media screen and (min-width: 768px) {
@@ -1167,12 +1169,41 @@ ul {
       url(../images/people-office-1@2x.jpg);
   }
 }
+@media screen and (min-width: 320px) and (max-width: 428px) {
+  .container {
+    max-width: 428px;
+  }
+  .header-menu-contact-box {
+    width: 100%; 
+  }
+  .our-customers > .container {
+    max-width: 428px;
+  }
+  .our-customers-box {
+    width: 136px;
+  }
+  .newsletter-subscribe-field {
+    width: 320px;
+  }
+  .mobile-social {
+    gap: 26px;
+  }
+  .mobile-contact-phone-link {
+    font-size: 28px;
+  }
+  .modal-body {
+    width: 320px;
+  }
+}
 
 /* ---------------------------------------Desktop--------------------------------- */
 
 @media screen and (min-width: 1200px) {
   .container {
     max-width: 1128px;
+  }
+  .our-customers > .container {
+    width: 1128px;
   }
   .header-menu {
     display: flex;
@@ -1208,7 +1239,7 @@ ul {
   }
   .our-approach-list {
     display: flex;
-    gap: 24px;
+    gap: 24px;px
   }
   .our-approach-content {
     flex-basis: calc((100% - 72px) / 4);
