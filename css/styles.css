@@ -430,6 +430,9 @@ ul {
   letter-spacing: 0.72px;
   margin-bottom: 8px;
 }
+.our-approach > .container {
+  width: 480px;
+}
 .text {
   font-size: 16px;
   text-align: center;
@@ -453,7 +456,8 @@ ul {
   letter-spacing: 0.32px;
 }
 .our-approach {
-  padding: 96px 16px;
+  padding-top: 96px;
+  padding-bottom: 96px;
 }
 .our-approach-list {
   display: flex;
@@ -1082,11 +1086,12 @@ ul {
     flex-direction: row;
     column-gap: 24px;
     row-gap: 72px;
-    margin-left: 16px;
-    margin-right: 16px;
+      }
+  .our-approach > .container {
+    width: 768px;
   }
   .our-approach-content {
-    flex-basis: calc((100% - 24px) / 2);
+    width: 356px;
   }
   .our-approach-text-head {
     text-align: left;
@@ -1168,18 +1173,21 @@ ul {
       url(../images/people-office-1@2x.jpg);
   }
 }
-@media screen and (min-width: 320px) and (max-width: 428px) {
+@media screen and (min-width: 320px) and (max-width: 479px) {
   .container {
-    max-width: 428px;
+    max-width: 479px;
   }
   .main-banner {
-    max-width: 428px;
+    max-width: 479px;
   }
   .header-menu-contact-box {
     width: 100%; 
   }
+  .our-approach > .container {
+    width: 320px;
+  }
   .our-customers > .container {
-    width: 428px;
+    width: 320px;
   }
   .our-customers-box {
     width: 136px;
@@ -1243,6 +1251,9 @@ ul {
     display: flex;
     gap: 24px;px
   }
+  .our-approach > .container {
+    width: 1128px;
+}
   .our-approach-content {
     flex-basis: calc((100% - 72px) / 4);
   }
