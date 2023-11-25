@@ -1123,6 +1123,12 @@ ul {
     flex-direction: row;
     column-gap: 24px;
     row-gap: 72px;
+    margin-left: 92px;
+    margin-top: auto;
+  }
+  .footer-content-container {
+    display: flex;
+    justify-content: center;
   }
   .footer-content-logo {
     text-align: left;
@@ -1130,6 +1136,9 @@ ul {
   .social-text {
     text-align: left;
   }
+    .newsletter-subscribe-field {
+      width: 264px;
+    }
   .newsletter-subscribe-form {
     display: flex;
     flex-direction: row;
@@ -1313,8 +1322,8 @@ ul {
   .footer-content {
     column-gap: 0px;
     row-gap: 0px;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 0px;
+    margin-right: 0px;
   }
   .footer-content-box-logo {
     margin-right: 120px;
