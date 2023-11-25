@@ -26,6 +26,11 @@
           <a class="logo link" href="./index.html"
             >Web<span class="studio">Studio</span></a
           >
+          <button class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+            <svg class="mobile-menu-hamburger" width="32" height="22" viewbox="0 0 32 22" xmlns="http://www.w3.org/2000/svg">
+              <use href="./images/icons.svg#icon-Mobile-menu-icon"></use>
+            </svg>
+          </button>
           <ul class="main-menu list">
             <li>
               <a class="main-menu-link link" href="./index.html">Studio</a>
@@ -81,8 +86,6 @@
                     class="project-card-img"
                     src="./images/banking-app.jpg"
                     alt="a"
-                    width="360"
-                    height="300"
                   />
                   <p class="project-card-item-wrapper-content">
                     14 Stylish and User-Friendly App Design Concepts · Task
@@ -369,5 +372,65 @@
         </div>
       </div>
     </footer>
+    <div class="menu-container is-hidden js-menu-container" id="mobile-menu">
+      <button class="mobile-menu-close js-close-menu" type="button">
+        <svg class="close-icon" width="8" height="8" xmlns="http://www.w3.org/2000/svg">
+          <use href="./images/icons.svg#icon-close"></use>
+        </svg>
+      </button>
+      <div class="mobile-menu-container">
+        <ul class="mobile-menu">
+          <li><a href="./index.html" class="mobile-menu-link">Studio</a></li>
+          <li><a href="./portfolio.html" class="mobile-menu-link">Portfolio</a></li>
+          <li><a href="" class="mobile-menu-link">Contacts</a></li>
+        </ul>
+        <div class="mobile-menu-contact-box">
+          <address class="contact-mobile-menu">
+            <ul class="list">
+              <li class="contact-mobile-menu-link">
+                <a class="mobile-contact-phone-link link" href="tel:+110001111111">+11 (000) 111-11-11</a>
+              </li>
+              <li class="contact-mobile-menu-link">
+                <a class="mobile-contact-email-link link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+              </li>
+            </ul>
+          </address>
+          <ul class="mobile-social list">
+            <li class="teammate-social-icons">
+              <a href="" class="mobile-social-links">
+                <svg class="social-icons" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+                  <use href="./images/icons.svg#icon-instagram-2"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="teammate-social-icons">
+              <a href="" class="mobile-social-links">
+                <svg class="social-icons" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+                  <use href="./images/icons.svg#icon-twitter-1"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="teammate-social-icons">
+              <a href="" class="mobile-social-links">
+                <svg class="social-icons" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+                  <use href="./images/icons.svg#icon-facebook-1"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="teammate-social-icons">
+              <a href="" class="mobile-social-links">
+                <svg class="social-icons" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+                  <use href="./images/icons.svg#icon-linkedin-1"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

@@ -57,7 +57,10 @@ ul {
   overflow: hidden;
 }
 .container {
+  width: 475px;
   margin: 0 auto;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 .logo {
   font-family: Raleway, sans-serif;
@@ -95,15 +98,17 @@ ul {
     0px 1px 1px 0px rgba(46, 47, 66, 0.16),
     0px 2px 1px 0px rgba(46, 47, 66, 0.08);
 }
+.mobile-menu-hamburger {
+  fill: currentColor;
+}
 .menu-toggle {
   margin: 0;
   padding: 0;
   background-color: transparent;
   cursor: pointer;
   border: none;
-  border-radius: 50%;
   outline: none;
-  fill: var(--Dark);
+  color: var(--Dark);
   min-height: 40px;
   min-width: 40px;
   display: flex;
@@ -113,6 +118,7 @@ ul {
 .menu-toggle:hover,
 .menu-toggle:focus {
   cursor: pointer;
+  color: var(--Pressed-state);
 }
 .menu-container {
   position: fixed;
@@ -139,7 +145,7 @@ ul {
   list-style: none;
 }
 
-.mobile-menu .link {
+.mobile-menu-link {
   display: block;
   padding-top: 40px;
   color: var(--Dark);
@@ -150,8 +156,8 @@ ul {
   letter-spacing: 0.72px;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.mobile-menu .link:hover,
-.mobile-menu .link:focus {
+.mobile-menu-link:hover,
+.mobile-menu-link:focus {
   color: var(--Pressed-state);
 }
 .menu-container .mobile-menu-close {
@@ -305,10 +311,13 @@ ul {
   color: var(--Pressed-state);
 }
 .filters-list {
+  width: 100%;
   display: flex;
-  gap: 24px;
-  justify-content: center;
-  margin-bottom: 72px;
+  flex-wrap: wrap;
+  justify-content: left;
+  column-gap: 24px;
+  row-gap: 16px;
+  margin-bottom: 48px;
 }
 .filter-button {
   color: var(--Primary-Brand);
@@ -429,9 +438,6 @@ ul {
   line-height: 1.2;
   letter-spacing: 0.72px;
   margin-bottom: 8px;
-}
-.our-approach > .container {
-  width: 480px;
 }
 .text {
   font-size: 16px;
@@ -582,19 +588,18 @@ ul {
   margin-left: 292px;
 }
 .projects {
-  padding-bottom: 120px;
-  padding-top: 96px;
+  padding-bottom: 48px;
+  padding-top: 48px;
 }
 .project-cards-list {
   display: flex;
-  flex-wrap: wrap;
-  row-gap: 48px;
-  column-gap: 24px;
+  flex-direction: column;
+  gap: 48px;
 }
 .project-card {
   display: flex;
   flex-direction: column;
-  flex-basis: calc((100% - 48px) / 3);
+  width: 100%;
 }
 .project-card-content {
   padding: 32px 16px;
@@ -643,15 +648,12 @@ ul {
 }
 .project-card-img {
   display: block;
-  max-width: 100%;
+  width: 100%;
   height: auto;
 }
 .our-customers {
   padding-top: 96px;
   padding-bottom: 96px;
-}
-.our-customers > .container {
-  width: 480px;
 }
 .our-customers-logo {
   fill: currentColor;
@@ -1001,7 +1003,7 @@ ul {
 
 @media screen and (min-width: 768px) {
   .container {
-    max-width: 768px;
+    width: 768px;
   }
   .header-menu-contact-box {
     width: 768px;
@@ -1087,9 +1089,6 @@ ul {
     column-gap: 24px;
     row-gap: 72px;
       }
-  .our-approach > .container {
-    width: 768px;
-  }
   .our-approach-content {
     width: 356px;
   }
@@ -1115,11 +1114,8 @@ ul {
     row-gap: 72px;
   }
   .our-customers-box {
-    width: calc((100% - 48px) / 3);
+    width: 168px;
     height: 88px;
-  }
-  .our-customers > .container {
-    width: 768px;
   }
   .footer-content {
     display: flex;
@@ -1149,7 +1145,30 @@ ul {
   .subscribe {
     margin: 0;
   }
+ /* -------portfolio-------- */
+  .filters-list {
+    width: 100%;
+    flex-wrap: nowrap;
+    gap: 24px;
+    justify-content: center;
+    margin-bottom: 64px;
+ }
+ .projects {
+   padding-bottom: 96px;
+   padding-top: 64px;
+ }
+ .project-cards-list {
+   display: flex;
+   flex-wrap: wrap;
+   flex-direction: row;
+   row-gap: 48px;
+   column-gap: 24px;
+ }
+ .project-card {
+  width: 356px;
+ }
 }
+
 
 /* --------------------------------------------------------------------------- */
 
@@ -1175,13 +1194,12 @@ ul {
 }
 @media screen and (min-width: 320px) and (max-width: 479px) {
   .container {
-    max-width: 479px;
+    width: 320px;
+    padding-left: 16px;
+    padding-right:16px;
   }
   .main-banner {
     max-width: 479px;
-  }
-  .header-menu-contact-box {
-    width: 100%; 
   }
   .our-approach > .container {
     width: 320px;
@@ -1204,13 +1222,19 @@ ul {
   .modal-body {
     width: 320px;
   }
+  /* -----porfolio------ */
+  .filters-list {
+    width: 100%;
+  }
 }
 
 /* ---------------------------------------Desktop--------------------------------- */
 
 @media screen and (min-width: 1200px) {
   .container {
-    max-width: 1128px;
+    width: 1200px;
+    padding-left: 36px;
+    padding-right: 36px;
   }
   .our-customers > .container {
     width: 1128px;
@@ -1223,13 +1247,8 @@ ul {
   .main-menu {
     margin-left: 76px;
   }
-  .header-menu-contact-box {
-    width: 100%;
-    padding-left: 0px;
-    padding-right: 0px;
-  }
   .main-banner {
-    max-width: 1200px;
+    max-width: 1440px;
     height: 600px;
     padding-top: 188px;
     padding-bottom: 188px;
@@ -1305,5 +1324,13 @@ ul {
   }
   .newsletter-subscribe-field {
     width: 264px;
+  }
+/* -------portfolio-------- */
+  .filters-list {
+    margin-bottom: 72px;
+  }
+  .projects {
+    padding-bottom: 120px;
+    padding-top: 96px;
   }
 }
