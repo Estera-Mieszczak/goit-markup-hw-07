@@ -44,6 +44,9 @@ ul {
   margin: 0;
   padding-left: 0;
 }
+.animate__fadeInDown {
+  animation-duration: 1.2s;
+}
 .visually-hidden {
   position: absolute;
   width: 1px;
